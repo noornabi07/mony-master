@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money master</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="flex justify-center mt-10">
+        <h2 class="text-5xl font-bold text-lime-500	mr-2">Money Master</h2>
+        <span class="text-5xl text-teal-400	"> <i class="fa-solid fa-sack-dollar"></i></span>
+    </header>
+
+    <main>
+        <section class="grid grid-cols-2 px-20 mt-10 mb-10">
+            <div>
+                <img class="rounded-lg" src="./money-banner.png" alt="">
+            </div>
+            <!-- calculate part -->
+            <div class="bg-green-600 p-5 text-center rounded-lg">
+                <h4 class="text-4xl font-bold mb-4 text-purple-500">Income</h4>
+                <label  for="" class="font-semibold text-2xl text-white mr-3">Income:</label>
+                <input id="total-income" type="text" class="py-2 px-4 rounded mb-4 w-3/4" placeholder="type income amount">
+
+
+                <h4 class="text-4xl font-bold mb-4 text-purple-500">Expensive</h4>
+
+                <label class="font-semibold text-2xl text-white mr-3 ml-6" for="">Food:</label>
+                <input id="food-input" class="py-2 px-4 rounded mb-4 w-3/4" type="text" placeholder="Food cost"><br>
+                
+                <label class="font-semibold text-2xl text-white mr-3 ml-7" for="">Rent:</label>
+                <input id="rent-input" class="py-2 px-4 rounded mb-4 w-3/4" type="text" placeholder="Rent cost"><br>
+
+                <label class="font-semibold text-2xl text-white mr-3" for="">Clothes:</label>
+                <input id="clothes-btn" class="py-2 px-4 rounded mb-4 w-3/4" type="text" placeholder="Clothes cost"><br>
+
+                <button id="calculate-btn" class="bg-indigo-500 py-2 px-10 rounded font-semibold text-2xl text-white hover:bg-sky-700 cursor-pointer mb-4 mt-2">Calculate</button>
+
+                <h3 class="text-4xl font-bold mb-4 text-purple-500">Total Expense: <span class="text-white" id="total-expense">00</span></h3>
+                <h3  class="text-4xl font-bold mb-4 text-purple-500">Balance: <span class="text-white" id="total-balance">00</span></h3>
+
+                <!-- save amount part -->
+                <div>
+                    <label class="font-semibold text-2xl text-white mr-3">Save</label>
+                    <input id="save-input" class="py-2 px-4 rounded mb-4 mr-2" type="text" placeholder="type save amount">
+                    <span class="font-bold mx-2 text-white text-3xl"><i class="fa-solid fa-percent "></i></span>
+                    <button id="save-btn" class="bg-indigo-500 py-2 px-10 rounded font-semibold text-2xl text-white hover:bg-sky-700 cursor-pointer mb-4 mt-2 ml-3">Save</button>
+
+                </div>
+                <h3 class="text-4xl font-bold mb-4 text-purple-500">Saving Amount: <span class="text-white" id="saving-amount">00</span></h3>
+                <h3 class="text-4xl font-bold mb-4 text-purple-500">Remaining Balance: <span class="text-white" id="remaining-balance">00</span></h3>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/calculate.js"></script>
+</body>
+</html>
